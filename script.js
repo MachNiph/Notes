@@ -20,7 +20,7 @@ notesContainer.addEventListener("click", function (e) {
   } else if (e.target.classList.contains("input-text")) {
     notes = document.querySelectorAll(".input-text");
     notes.forEach((item) => {
-      item.addEventListener("keyup", function () {
+      item.addEventListener("keydown", () => {
         updateStorage();
       });
     });
@@ -44,7 +44,7 @@ notesContainer.addEventListener("click", function (e) {
     inputField.appendChild(inputBox);
     inputField.appendChild(deleteBtn);
     notesContainer.appendChild(inputField);
-    updateStorage(); // Add this line to update the storage after creating a new note
+    updateStorage();
   }
 });
 
