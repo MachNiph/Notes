@@ -6,11 +6,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 4%;
+  padding-left: 5%;
   background: linear-gradient(rgb(125, 176, 232), pink);
-  width: 100%;
-  padding-top: 40px;
-  padding-left: 40px;
 }
 
 .notes-head {
@@ -55,7 +54,7 @@
 }
 
 .input-text {
-  width: 400px;
+  width: 250px;
   height: 200px;
   background-color: white;
   margin-top: 40px;
@@ -66,12 +65,18 @@
     "Lucida Sans", Arial, sans-serif;
 }
 
+.input-field {
+  position: relative;
+  width: 260px;
+}
+
 .input-field .delete-btn {
-  background-color: white;
+  background-color: transparent;
   border: none;
   position: absolute;
+  display: flex;
   bottom: 0;
-  margin-left: 370px;
+  right: 0;
 }
 
 .input-field .delete-btn:hover img {
@@ -81,8 +86,4 @@
 .delete-btn img {
   width: 30px;
   transition: 0.5s ease;
-}
-
-.input-field {
-  position: relative;
 }
