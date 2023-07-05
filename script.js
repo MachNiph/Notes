@@ -1,13 +1,21 @@
 const notesContainer = document.querySelector(".container");
 let notes = document.querySelectorAll(".input-text");
 
+showNotes();
+
 function showNotes() {
-  notesContainer.innerHTML = localStorage.getItem("notes");
+  const storedNotes = localStorage.getItem("notes");
+  if (storedNotes) {
+    notesContainer.innerHTML = storedNotes;
+  } else {
+    notesContainer.innerHTML = "No notes found";
+  }
 }
+
+showNotes();
 
 function updateStorage() {
   localStorage.setItem("notes", notesContainer.innerHTML);
-  showNotes();
 }
 
 notesContainer.addEventListener("click", function (e) {
