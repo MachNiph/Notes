@@ -28,9 +28,12 @@ notesContainer.addEventListener("click", function (e) {
   } else if (e.target.classList.contains("input-text")) {
     notes = document.querySelectorAll(".input-text");
     notes.forEach((item) => {
-      item.addEventListener("keydown", () => {
+      item.onkeyup = function () {
+        if (item.value == "") {
+          item.remove();
+        }
         updateStorage();
-      });
+      };
     });
   }
 
@@ -52,7 +55,6 @@ notesContainer.addEventListener("click", function (e) {
     inputField.appendChild(inputBox);
     inputField.appendChild(deleteBtn);
     notesContainer.appendChild(inputField);
-    updateStorage();
   }
 });
 
