@@ -1,13 +1,13 @@
-// const notesContainer = document.querySelector(".container");
+const notesContainer = document.querySelector(".container");
 let notes = document.querySelectorAll(".input-text");
 
 function showNotes() {
   notesContainer.innerHTML = localStorage.getItem("notes");
 }
-showNotes();
 
 function updateStorage() {
   localStorage.setItem("notes", notesContainer.innerHTML);
+  showNotes();
 }
 
 notesContainer.addEventListener("click", function (e) {
