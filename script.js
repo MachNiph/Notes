@@ -1,4 +1,4 @@
-const notesContainer = document.querySelector(".container");
+// const notesContainer = document.querySelector(".container");
 let notes = document.querySelectorAll(".input-text");
 
 function showNotes() {
