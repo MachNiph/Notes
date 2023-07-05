@@ -44,6 +44,7 @@ notesContainer.addEventListener("click", function (e) {
     inputField.appendChild(inputBox);
     inputField.appendChild(deleteBtn);
     notesContainer.appendChild(inputField);
+    updateStorage(); // Add this line to update the storage after creating a new note
   }
 });
 
