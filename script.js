@@ -8,7 +8,7 @@ function showNotes() {
   if (storedNotes) {
     notesContainer.innerHTML = storedNotes;
   } else {
-    notesContainer.innerHTML = "No notes found";
+    notesContainer.innerHTML = notesContainer;
   }
 }
 

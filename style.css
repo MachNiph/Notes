@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background: linear-gradient(rgb(125, 176, 232), pink);
+}
 
 .container {
   display: flex;
